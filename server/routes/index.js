@@ -10,12 +10,12 @@ const connectionString = process.env.DATABASE_URL ||
   'postgres://postgres:postgres10@localhost:5432/todo';
 
 var db = pgp(connectionString);
-var route = '/api/v1/todos';
+var route = '/api/v1/todos'; 
 
 var handleError1 = function(err) {
   console.log(err);
   return res.status(500).json({success: false, data: err});
-}
+};
 
 //Generic final pathway for all routes
 function respond(promise, res) {

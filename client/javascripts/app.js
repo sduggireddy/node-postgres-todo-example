@@ -11,6 +11,7 @@ angular.module('nodeTodo', [])
             .error((error) => {
                 console.log('Error: ' + error);
             });
+            
         //create a new TODO
         $scope.createTodo = () => {
             $http.post('/api/v1/todos', $scope.formData)
